@@ -1,0 +1,25 @@
+<div class="inner-header">
+	<h1>Our collection</h1>
+</div>
+<div class="breadcrumbs">
+	<%= render_breadcrumbs separator: ' > ' %>
+</div>
+<div class="paginate">
+	<%= paginate @products %>
+</div>
+<div class="flex-container">
+	<% @products.each do |product| %>
+		<div class="flex-box">
+			<p><%= image_tag product.image, :width => "100px", :hight => "100px" %></p>
+			<p><%= product.id %></p>
+			<p><%= link_to product.name, product_path(product.id) %></p>
+			<p><%= product.price %></p>
+			<p><%= product.description %></p>
+		</div>
+	<% end %>
+</div>
+<div class="paginate">
+	<%= paginate @products %>
+</div>
+
+

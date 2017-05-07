@@ -1,0 +1,19 @@
+<div class="header-line"></div>
+<div class="art-name">
+	<h1><%= @product.name %></h1>
+</div>
+<div class="header-line"></div>
+<div class="breadcrumbs">
+	<%= render_breadcrumbs separator: ' > ' %>
+</div>
+<div class="detail-box clearfix">
+	<div class="detail-img">
+		<h3><%= image_tag @product.image, size: "500" %></h3>
+	</div>
+	<div class="detail-content">
+		<h3><%= @product.id %></h3>
+		<h3>Price : <span>¥<%= @product.price %></span></h3>
+		<h3>Description : <br>
+			<span><%= @product.description %></span></h3>
+	</div>	
+</div>
